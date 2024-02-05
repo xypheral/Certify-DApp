@@ -1,0 +1,136 @@
+/* CSS for centering the QR code container */
+#qrCodeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the container takes up the full height */
+  }
+
+.qr-code-container {
+  border: 4px solid white; /* Adjust the border size as needed */
+  padding: 10px; /* Add padding for spacing between border and QR code */
+}  
+
+
+#qrCodeContainer {
+  display: grid;
+  place-items: center; /* Center both horizontally and vertically */
+  height: 100vh; /* Adjust to your needs */
+}
+
+/* Center-align the QR code reader */
+.center-container {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 180px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #116399, #38caef);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #38caef;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+#productregistration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.form__group {
+  margin-bottom: 20px; /* Adjust the margin between form elements as needed */
+}
+
+button {
+ border: none;
+ color: #fff;
+ background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+ border-radius: 20px;
+ background-size: 100% auto;
+ font-family: inherit;
+ font-size: 17px;
+ padding: 0.6em 1.5em;
+}
+
+button:hover {
+ background-position: right center;
+ background-size: 200% auto;
+ -webkit-animation: pulse 2s infinite;
+ animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+ 0% {
+  box-shadow: 0 0 0 0 #05bada66;
+ }
+
+ 70% {
+  box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+ }
+
+ 100% {
+  box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+ }
+}
